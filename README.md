@@ -6,6 +6,22 @@ Power BI for Facebook Group Analytics
 - [Ссылка][3] на обсуждение BI-системы в группе ["Power BI, Excel для интернет-маркетинга и не только"][4]
 - [Ссылка][6] на опубликованную BI-систему
 
+# Код команды в Dax Studio для извлечения всех мер #
+
+В качестве эксперимента решил попробовать код функций публиковать отдельно на github. Нашел в интернетах, что это можно сделать при помощи Dax Studio. [Источник](https://exceleratorbi.com.au/dmv-extract-measures-power-pivot/)
+
+```
+select  [TABLE],
+        OBJECT as ColumnName,
+        Expression
+     
+from $SYSTEM.DISCOVER_CALC_DEPENDENCY
+
+where OBJECT_TYPE = 'CALC_COLUMN' and
+REFERENCED_OBJECT_TYPE = 'COLUMN'
+```
+
+
 [![][image-1]][6]
 
 [1]:	https://www.facebook.com/bitvru/videos/1719557358338051/
