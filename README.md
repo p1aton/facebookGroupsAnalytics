@@ -6,9 +6,9 @@ Power BI for Facebook Group Analytics
 - [Ссылка][3] на обсуждение BI-системы в группе ["Power BI, Excel для интернет-маркетинга и не только"][4]
 - [Ссылка][6] на опубликованную BI-систему
 
-# Код команды в Dax Studio для извлечения всех мер #
+# Извлечение кода мер Dax и скриптов M #
 
-В качестве эксперимента решил попробовать код функций публиковать отдельно на github. Нашел в интернетах, что это можно сделать при помощи Dax Studio. [Источник](https://exceleratorbi.com.au/dmv-extract-measures-power-pivot/)
+В качестве эксперимента решил попробовать код функций публиковать отдельно на github. Нашел в интернетах, что меры Dax можно извлечь при помощи Dax Studio. [Источник](https://exceleratorbi.com.au/dmv-extract-measures-power-pivot/)
 
 ```
 select  [TABLE],
@@ -21,6 +21,7 @@ where OBJECT_TYPE = 'CALC_COLUMN' and
 REFERENCED_OBJECT_TYPE = 'COLUMN'
 ```
 
+Код скриптов в M был извлечен при помощи программы [Power BI Helper](http://radacad.com/power-bi-helper)
 
 [![][image-1]][6]
 
